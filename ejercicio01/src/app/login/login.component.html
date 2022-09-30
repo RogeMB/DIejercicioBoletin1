@@ -1,0 +1,29 @@
+<h1>BOLETÍN 01</h1>
+<h2>Ejercicio 01 - LOGIN</h2>
+
+<div class="container">
+    <form class="example-form">
+        <div class="log">
+            <p>Username</p>
+            <div class="log">
+                <mat-form-field class="example-full-width" appearance="legacy">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Email">
+                <mat-icon matSuffix>mail</mat-icon>
+                <mat-hint>Escribe tu Email</mat-hint>
+                </mat-form-field>
+            </div>
+            <p>Password</p>
+            <div class="log">
+                <mat-form-field class="example-full-width" appearance="legacy">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </button>
+                    <mat-hint>Escribe tu contraseña</mat-hint>
+                  </mat-form-field>
+            </div>   
+        </div>
+    </form>
+</div>
