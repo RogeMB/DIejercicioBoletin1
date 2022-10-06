@@ -3,15 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { MaterialImportsModule } from './modules/material-imports.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FilmListComponent } from './components/film-list/film-list.component';
+import { FormsModule } from '@angular/forms';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
-    PokemonListComponent
+    FilmListComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,
