@@ -1,5 +1,16 @@
-<p>Listado fácil de Pokémon</p>
+<p>Listado fácil de Pokémon </p>
 
 <ul>
   <li *ngFor="let pokemon of listadoPokemon">{{pokemon.name}}</li>
 </ul>
+
+<mat-card *ngFor="let pokemon of listadoPokemon" class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+    <mat-card-subtitle>{{pokemon}}</mat-card-subtitle>
+    <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card>
