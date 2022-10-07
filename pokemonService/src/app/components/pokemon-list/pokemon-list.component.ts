@@ -21,7 +21,7 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.pokemonList().subscribe(response => {
-      this.listadoPokemon = response.results;
+      this.listadoPokemon = response.results; //Aquí estoy agregando los pokemons a la lista según la respuesta que le está llegando
       this.getPokemonsComp();
       //this.pokemonService.getPokemon(this.getRandomInt())
     });
