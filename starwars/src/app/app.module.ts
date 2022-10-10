@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilmListComponent } from './components/film-list/film-list.component';
 import { FormsModule } from '@angular/forms';
 import { PeopleListComponent } from './components/people-list/people-list.component';
+import { SpeciesListComponent } from './components/species-list/species-list.component';
 
 @NgModule({
   declarations: [ 
     AppComponent,
     FilmListComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    SpeciesListComponent
   ],
   imports: [
     BrowserModule,

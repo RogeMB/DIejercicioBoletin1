@@ -1,0 +1,12 @@
+
+<h1>Star Wars Species</h1>
+<ul>
+    <li *ngFor="let specie of species">{{specie.title}}</li>
+</ul>
+
+<mat-paginator [length]="37"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+

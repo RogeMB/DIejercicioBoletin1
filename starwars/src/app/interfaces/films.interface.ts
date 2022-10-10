@@ -1,7 +1,7 @@
 export interface FilmsResponse {
     count:    number;
     next:     string;
-    previous: string;
+    previous: null;
     results:  Film[];
 }
 

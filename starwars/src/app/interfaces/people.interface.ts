@@ -3,7 +3,7 @@
 export interface PeopleResponse {
     count:    number;
     next:     string;
-    previous: string;
+    previous: null;
     results:  People[];
 }
 
