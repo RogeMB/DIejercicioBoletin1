@@ -8,14 +8,29 @@ import { PeopleService } from 'src/app/services/people.service';
   styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
- PeopleList: People[]=[];
+ peopleList: People[]=[];
+ numPages = 0;
 
   constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
     this.peopleService.getPeople().subscribe(resp=>{
-      this.PeopleList = resp.results;
+      this.peopleList = resp.results;
+      this.numPages = Math.ceil(resp.count / 10);
+      /*
+      if(this.numPages == 0) {
+        this.numPages = Math.ceil(resp.count / resp.results.length);
+      }
+      */
     });     
+  }
+
+  counter(){
+    return new Array (this.numPages);
+  }
+
+  getPeopePage(page: number) {
+    
   }
 
 }

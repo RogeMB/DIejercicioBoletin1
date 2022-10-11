@@ -1,0 +1,65 @@
+<div class="example-tel-input-container">
+    <form>
+        <mat-form-field appearance="fill" class="example-tel-input-element">
+          <mat-label>Nombre</mat-label>
+          <input  type="text" matInput placeholder="Nombre" class="example-tel-input-spacer">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Escriba su nombre</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <form>
+        <mat-form-field appearance="fill" class="example-tel-input-element">
+          <mat-label>Apellidos</mat-label>
+          <input type="text" matInput placeholder="Apellidos" class="example-tel-input-spacer">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Escriba sus apellidos</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <form>
+      <mat-form-field appearance="fill" class="example-tel-input-element">
+        <mat-label>NIF</mat-label>
+        <input type="tel" matInput placeholder="312321321-Q" class="example-tel-input-spacer">
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-hint>Introduzca su documento de identidad</mat-hint>
+      </mat-form-field>
+    </form>
+
+    <form>
+      <mat-form-field appearance="fill" class="example-tel-input-element">
+        <mat-label>Escriba su email</mat-label>
+        <input type="email" matInput placeholder="ejemplo@email.com" email required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-icon matSuffix>mail</mat-icon>
+        <mat-hint>Escriba un email correcto</mat-hint>
+      </mat-form-field>
+    </form>
+
+    <form>
+      <mat-form-field appearance="fill" class="example-tel-input-element">
+        <mat-label>Teléfono</mat-label>
+        <span matPrefix class="example-tel-input-spacer">+34 &nbsp;</span>
+        <input type="tel" matInput placeholder="954-564-134" class="example-tel-input-spacer">
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Introduzca su teléfono</mat-hint>
+      </mat-form-field>
+    </form>
+
+    <form>
+      <mat-form-field appearance="fill" class="example-tel-input-element">
+        <mat-label>Género</mat-label>
+        <mat-select class="example-tel-input-spacer">
+          <mat-option value="option">Macho</mat-option>
+          <mat-option value="option">Hembra</mat-option>
+          <mat-option value="option">Otro</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-hint>Selecciona una opción</mat-hint>
+      </mat-form-field>
+    </form>
+
+
+
+</div>
+

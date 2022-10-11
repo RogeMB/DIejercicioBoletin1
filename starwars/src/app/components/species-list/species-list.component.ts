@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Specie } from 'src/app/interfaces/species.interface';
 
 @Component({
   selector: 'app-species-list',
@@ -9,7 +10,7 @@ export class SpeciesListComponent implements OnInit {
 
   constructor() { }
   
-  specieslist: Specie = []
+  specieslist: Specie[]= [];
 
   ngOnInit(): void {
   }
