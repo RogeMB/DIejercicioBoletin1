@@ -29,3 +29,7 @@ export enum Gender {
     Male = "male",
     NA = "n/a",
 }
+
+export interface FilmData {
+    filmInfo: Film;
+  }

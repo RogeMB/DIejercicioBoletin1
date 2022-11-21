@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PeopleResponse } from '../interfaces/people.interface';
+import { environment } from 'src/environments/environment';
+import { People, PeopleResponse } from '../interfaces/people.interface';
 
-
-const API_BASE_URL = 'https://swapi.dev/api';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +12,13 @@ export class PeopleService {
 
   constructor(private http:HttpClient) { }
     
-  public getPeople() : Observable<PeopleResponse> {
-      return this.http.get<PeopleResponse>(`${API_BASE_URL}/people/`)
-    }
+  getPeople(page: number): Observable<PeopleResponse>{
+    return this.http.get<PeopleResponse>(`${environment.apiBaseUrl}/people?page=${page}`);
+  }
 
-  public getFilms(): Observable<PeopleResponse>{
-    return this.http.get<PeopleResponse>(`${API_BASE_URL}/films/`);
+  public getPeopleById(character: People): Observable<People> {
+    let id = character.url.split('/').reverse()[1];
+    return this.http.get<People>(`${environment.apiBaseUrl}/people/${id}`)
   }
     
 }

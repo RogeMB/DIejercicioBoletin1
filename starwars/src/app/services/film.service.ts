@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FilmsResponse } from '../interfaces/films.interface';
-
-const API_BASE_URL = 'https://swapi.dev/api';
+import { environment } from 'src/environments/environment';
+import { Film, FilmsResponse } from '../interfaces/films.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,16 @@ export class FilmService {
 
   constructor(private http: HttpClient) { }
 
-  public getFilms(): Observable<FilmsResponse>{
-    return this.http.get<FilmsResponse>(`${API_BASE_URL}/films/`);
+  getFilms(page: number): Observable<FilmsResponse> {
+    return this.http.get<FilmsResponse>(
+      `${environment.apiBaseUrl}/films?page=${page}`
+    );
   }
+
+  getFilmById(film: Film): Observable<Film> {
+    let id = film.url.split('/').reverse()[1];
+    return this.http.get<Film>(`${environment.apiBaseUrl}/films/${id}`);
+  }
+
+
 }

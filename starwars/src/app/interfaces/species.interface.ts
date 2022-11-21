@@ -16,7 +16,7 @@ export interface Specie {
     hair_colors:      string;
     eye_colors:       string;
     average_lifespan: string;
-    homeworld:        null | string;
+    homeworld?:       string;
     language:         string;
     people:           string[];
     films:            string[];
@@ -29,3 +29,7 @@ export enum Designation {
     Reptilian = "reptilian",
     Sentient = "sentient",
 }
+
+export interface SpecieData {
+    specieInfo: Specie;
+  }

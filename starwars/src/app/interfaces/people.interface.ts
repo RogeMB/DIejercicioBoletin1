@@ -31,3 +31,7 @@ export enum Gender {
     Male = "male",
     NA = "n/a",
 }
+
+export interface PeopleData {
+    characterInfo: People;
+  }

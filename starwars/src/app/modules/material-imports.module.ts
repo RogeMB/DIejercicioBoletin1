@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
-//import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
+
 //Angular Material Components
-//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -32,12 +35,18 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
   declarations: [],
   imports: [
-   // CommonModule, 
+    CommonModule,
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
@@ -68,41 +77,47 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
+
   exports: [
-       // CommonModule, 
-       MatCheckboxModule,
-       MatCheckboxModule,
-       MatButtonModule,
-       MatInputModule,
-       MatAutocompleteModule,
-       MatDatepickerModule,
-       MatFormFieldModule,
-       MatRadioModule,
-       MatSelectModule,
-       MatSliderModule,
-       MatSlideToggleModule,
-       MatMenuModule,
-       MatSidenavModule,
-       MatToolbarModule,
-       MatListModule,
-       MatGridListModule,
-       MatCardModule,
-       MatStepperModule,
-       MatTabsModule,
-       MatExpansionModule,
-       MatButtonToggleModule,
-       MatChipsModule,
-       MatIconModule,
-       MatProgressSpinnerModule,
-       MatProgressBarModule,
-       MatDialogModule,
-       MatTooltipModule,
-       MatSnackBarModule,
-       MatTableModule,
-       MatSortModule,
-       MatPaginatorModule
+    CommonModule,
+    BrowserModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    FormsModule
   ]
 })
-export class MaterialImportsModule { }
+export class ImportsMaterialModule { }
