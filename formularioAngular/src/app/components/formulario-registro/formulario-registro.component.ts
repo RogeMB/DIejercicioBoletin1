@@ -9,18 +9,21 @@ import { FormControl, Validators } from '@angular/forms';
 export class FormularioRegistroComponent implements OnInit {
   constructor() {}
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  nombre: string = "";
+  apellidos: string = "";
+  email: string = "";
+  dni: string = "";
+  conocio: string = "";
+  genero: string = "";
+  telefono: number = 0;
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Tienes que introducir un email';
-    }
-
-    return this.email.hasError('email') ? 'No es un email válido' : '';
-  }
+  checked = false;
 
   ngOnInit(): void {
+  }
 
+  aceptaTerminos() {
+    console.log(this.nombre, this.apellidos, this.dni, this.email, this.genero, this.conocio, this.telefono);
   }
 
 }
