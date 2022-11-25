@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmListComponent } from './components/film-list/film-list.component';
-import { PeopleListComponent } from './components/people-list/people-list.component';
-import { SpeciesListComponent } from './components/species-list/species-list.component';
-import { MenuComponent } from './menu/menu.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { FilmsComponent } from './components/films/films.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+import { SpeciesComponent } from './components/species/species.component';
 
 const routes: Routes = [
   {path: 'menu', component: MenuComponent},
-  {path: 'characters', component: PeopleListComponent},
-  {path: 'films', component: FilmListComponent},
-  {path: 'species', component: SpeciesListComponent},
+  {path: 'characters', component: CharactersComponent},
+  {path: 'films', component: FilmsComponent},
+  {path: 'species', component: SpeciesComponent},
 
-  {path: '', redirectTo: '/menu', pathMatch: 'full'}
+  {path: '', redirectTo: '/menu', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
