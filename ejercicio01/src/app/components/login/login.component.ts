@@ -7,11 +7,21 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  hide = true;
+  checked = false;
+  checked2 = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-  hide = true;
+
+  aceptaTerminos() {
+    if(this.checked2 == true){
+      this.checked2=false;
+    } else{
+      this.checked2=true;
+    }
+  }
+  
 
 }

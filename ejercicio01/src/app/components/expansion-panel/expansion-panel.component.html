@@ -1,0 +1,31 @@
+<div>
+  <mat-accordion>
+    <mat-expansion-panel class="bg-red"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> HEADER </mat-panel-title>
+        <mat-panel-description>
+          Ahora estoy... {{ panelOpenState ? "open" : "closed" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Encabezados y más encabezados</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel class="bg-green"
+      (opened)="panelOpenState2 = true"
+      (closed)="panelOpenState2 = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> BODY </mat-panel-title>
+        <mat-panel-description>
+          Ahora estoy... {{ panelOpenState2 ? "open" : "closed" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Ahoara me ves porque estoy abierto</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

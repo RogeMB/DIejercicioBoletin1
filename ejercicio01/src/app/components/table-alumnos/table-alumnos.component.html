@@ -1,43 +1,40 @@
 <section class="example-section">
-  <mat-checkbox class="example-margin" [checked]="true">ID</mat-checkbox>
-  <mat-checkbox class="example-margin" [checked]="true">Nombre</mat-checkbox>
-  <mat-checkbox class="example-margin" [checked]="true">Apellidos</mat-checkbox>
-  <mat-checkbox class="example-margin" [checked]="true"
-    >Fecha Nacimiento</mat-checkbox
-  >
-  <mat-checkbox class="example-margin" [checked]="true">Curso</mat-checkbox>
+  <mat-checkbox class="example-margin" (click)="checkeaId()"  [(ngModel)]="checkedId" labelPosition="after" name="first">ID</mat-checkbox>
+  <mat-checkbox class="example-margin" (click)="checkeaNombre()" [(ngModel)]="checkedNombre" labelPosition="after" name="first">Nombre</mat-checkbox>
+  <mat-checkbox class="example-margin" (click)="checkeaApellidos()" [(ngModel)]="checkedApellidos" labelPosition="after" name="first">Apellidos</mat-checkbox>
+  <mat-checkbox class="example-margin" (click)="checkeaFN()" [(ngModel)]="checkedFN" labelPosition="after" name="first">Fecha Nacimiento</mat-checkbox>
+  <mat-checkbox class="example-margin" (click)="checkeaCurse()" [(ngModel)]="checkedCurse" labelPosition="after" name="first">Curso</mat-checkbox>
 </section>
-
 
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- ID Column -->
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.position }} </mat-cell>
+  <ng-container *ngIf="checkedId" matColumnDef="id">
+    <mat-header-cell  *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell  *matCellDef="let element"> {{ element.id }} </mat-cell>
   </ng-container>
 
   <!-- Nombre Column -->
-  <ng-container matColumnDef="nombre">
+  <ng-container *ngIf="checkedNombre" matColumnDef="nombre">
     <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.nombre }} </mat-cell>
   </ng-container>
 
   <!-- Apellidos Column -->
-  <ng-container matColumnDef="apellidos">
+  <ng-container *ngIf="checkedApellidos" matColumnDef="apellidos">
     <mat-header-cell *matHeaderCellDef> Apellidos </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.apellidos }} </mat-cell>
   </ng-container>
 
   <!-- FechaNacimiento Column -->
-  <ng-container matColumnDef="fechaNacimiento">
+  <ng-container *ngIf="checkedFN" matColumnDef="fechaNacimiento">
     <mat-header-cell *matHeaderCellDef> Fecha Nacimiento </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      {{ element.FechaNacimiento }}
+      {{ element.fechaNacimiento }}
     </mat-cell>
   </ng-container>
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="curso">
+  <ng-container *ngIf="checkedCurse" matColumnDef="curso">
     <mat-header-cell *matHeaderCellDef> Curso </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.curso }} </mat-cell>
   </ng-container>
